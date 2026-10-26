@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ziyu Wang — Computer Science undergraduate in the Turing Class at SUSTech. Research interests in vision-and-language navigation, robot learning, and knowledge distillation.">
+  <meta name="theme-color" content="#f6f7f4">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ziyu Wang | Research & Projects">
+  <meta property="og:description" content="Vision-and-language navigation, robot learning, and learning from richer visual context.">
+  <meta property="og:url" content="https://aurora-flipped.github.io/">
+  <meta property="og:image" content="https://aurora-flipped.github.io/assets/social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://aurora-flipped.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ziyu Wang | Research & Projects</title>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <aside class="profile" aria-label="Profile and navigation">
+      <a class="identity" href="#about" aria-label="Ziyu Wang, home">
+        <span class="monogram" aria-hidden="true">
+          <svg viewBox="0 0 112 112"><circle cx="56" cy="56" r="44"/><circle cx="56" cy="56" r="30"/><path d="M56 6v13M56 93v13M6 56h13M93 56h13"/><path class="needle" d="M71 32 62 62 40 80 49 49Z"/><circle class="center" cx="56" cy="56" r="3"/></svg>
+        </span>
+        <span class="profile-name">Ziyu Wang <span lang="zh-Hans">王梓宇</span></span>
+      </a>
+      <p class="profile-role">Computer Science undergraduate<br> Turing Class · SUSTech</p>
+      <p class="location"><span aria-hidden="true">↗</span> Shenzhen, China</p>
+      <nav aria-label="Main navigation">
+        <a class="active" href="#about" aria-current="location"><span>01</span>About</a>
+        <a href="#research"><span>02</span>Research & projects</a>
+        <a href="#background"><span>03</span>Background</a>
+        <a href="#contact"><span>04</span>Contact</a>
+      </nav>
+      <div class="profile-links">
+        <a class="cv-link" href="assets/Ziyu_Wang_CV.pdf" target="_blank" rel="noopener">Curriculum vitae <span aria-hidden="true">↗</span><small>PDF</small></a>
+        <a href="https://github.com/Aurora-Flipped" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="mailto:ziyuw9350@gmail.com">Email <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="profile-note">VISION · LANGUAGE · ACTION</p>
+    </aside>
+
+    <main id="main">
+      <section id="about" class="about section" aria-labelledby="about-heading">
+        <p class="eyebrow"><span class="small-mark" aria-hidden="true"></span> ABOUT ME</p>
+        <h1 id="about-heading">Learning to navigate<br>with <em>limited observations.</em></h1>
+        <div class="intro">
+          <p>I’m <strong>Ziyu Wang</strong>, a Computer Science undergraduate in the Turing Class at <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener">Southern University of Science and Technology</a>.</p>
+          <p>My research focuses on <strong>vision-and-language navigation</strong>: how an embodied agent can turn visual observations and language instructions into reliable actions in unfamiliar environments.</p>
+          <p>I’m currently exploring how richer visual context can supervise a navigation policy that uses only monocular RGB, visual history, and language at deployment. I also study navigation failure cases and the reliability of self-supervision for test-time adaptation.</p>
+        </div>
+        <ul class="interests" aria-label="Research interests">
+          <li>Vision-and-language navigation</li><li>Robot learning</li><li>Knowledge distillation</li>
+        </ul>
+        <div class="research-question"><span class="question-mark" aria-hidden="true">↳</span><p>How can we transfer richer training-time knowledge into reliable decisions from a limited view of the world?</p></div>
+      </section>
+
+      <section id="research" class="section" aria-labelledby="research-heading">
+        <div class="section-title"><div><p class="eyebrow">02 / EXPLORATIONS</p><h2 id="research-heading">Research & projects</h2></div><span class="section-note">2026 — present</span></div>
+
+        <article class="project featured" aria-labelledby="panorama-heading">
+          <div class="project-meta"><span class="status"><span aria-hidden="true"></span>Ongoing research</span><span>01 / NAVIGATION</span></div>
+          <h3 id="panorama-heading">Panorama-OPSD</h3>
+          <p class="project-subtitle">On-policy self-distillation for monocular navigation</p>
+          <p class="project-description">Designing a teacher–student framework that uses panoramic context during training to guide a navigation policy operating with a single forward-facing camera.</p>
+          <figure class="architecture">
+            <svg viewBox="0 0 680 228" role="img" aria-labelledby="architecture-title architecture-desc">
+              <title id="architecture-title">Proposed panoramic teacher and monocular student framework</title>
+              <desc id="architecture-desc">A panoramic teacher with a wider view supervises a monocular student under matched student-generated action prefixes. The deployed student uses monocular RGB, visual history, and a language instruction.</desc>
+              <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="m0 0 10 5-10 5Z" fill="#478174"/></marker></defs>
+              <text class="svg-kicker" x="24" y="25">PROPOSED TRAINING FRAMEWORK</text>
+              <rect class="teacher-box" x="24" y="44" width="224" height="98" rx="12"/>
+              <path class="view-arc" d="M51 96a27 27 0 1 1 54 0"/><path class="view-ray" d="m78 96-21-17m21 17V69m0 27 21-17"/>
+              <text class="svg-heading" x="123" y="83">Panoramic teacher</text><text class="svg-body" x="123" y="105">Richer visual context</text>
+              <path class="supervision-line" d="M254 93h159" marker-end="url(#arrow)"/>
+              <text class="svg-label" x="331" y="75" text-anchor="middle">Action supervision</text>
+              <text class="svg-small" x="331" y="116" text-anchor="middle">Matched student prefixes</text>
+              <rect class="student-box" x="423" y="44" width="233" height="98" rx="12"/>
+              <path class="view-arc" d="m449 103 14-32 14 32Z"/><circle cx="463" cy="99" r="3" fill="#356c60"/>
+              <text class="svg-heading" x="492" y="83">Monocular student</text><text class="svg-body" x="492" y="105">Limited visual context</text>
+              <path class="deployment-line" d="M539 149v19" marker-end="url(#arrow)"/>
+              <rect class="deploy-box" x="24" y="178" width="632" height="32" rx="6"/>
+              <text class="svg-small" x="40" y="199">AT DEPLOYMENT</text><text class="svg-deploy" x="191" y="199">Monocular RGB + visual history + language → navigation actions</text>
+            </svg>
+            <div class="architecture-mobile">
+              <p class="mobile-diagram-label">PROPOSED TRAINING FRAMEWORK</p>
+              <div class="mobile-teacher"><strong>Panoramic teacher</strong><span>Richer visual context</span></div>
+              <div class="mobile-supervision"><span aria-hidden="true">↓</span> Action supervision<br><small>Matched student-generated prefixes</small></div>
+              <div class="mobile-student"><strong>Monocular student</strong><span>Limited visual context</span></div>
+              <div class="mobile-deployment"><span>AT DEPLOYMENT</span>Monocular RGB + history + language</div>
+            </div>
+            <figcaption>Training with a wider view. Navigating with a single camera.</figcaption>
+          </figure>
+          <details class="project-details"><summary>Research approach <span aria-hidden="true">+</span></summary><div>
+            <p>The proposed design first jointly fine-tunes a shared policy on paired panoramic and monocular observations with the same expert-action labels. A frozen panoramic copy then supervises the monocular student on the student’s own sampled action prefixes.</p>
+            <p class="progress-note">Current stage: framework development and preliminary pipeline validation. Next steps: policy training and distillation evaluation.</p>
+          </div></details>
+          <ul class="project-tags"><li>Privileged visual context</li><li>Teacher–student learning</li><li>VLN-CE</li></ul>
+        </article>
+
+        <article class="project project-row" aria-labelledby="tta-heading">
+          <div class="project-index" aria-hidden="true">02</div><div class="project-content">
+            <div class="project-meta"><span class="status"><span aria-hidden="true"></span>Ongoing research</span><span>2026 — PRESENT</span></div>
+            <h3 id="tta-heading">Understanding navigation failures</h3>
+            <p class="project-subtitle">Failure analysis, learned action scoring & test-time adaptation</p>
+            <p>Reviewed VLN foundation models and analyzed their failure cases. Trained and evaluated scorers for eight action candidates from a frozen NaVIDA policy, comparing prediction and ranking objectives with action-only and state-conditioned baselines.</p>
+            <p>Currently exploring reliable self-supervised parameter updates using monocular RGB, visual history, and language instructions.</p>
+            <ul class="project-tags"><li>Failure analysis</li><li>Action scoring</li><li>Test-time adaptation</li></ul>
+          </div>
+        </article>
+
+        <article class="project project-row" aria-labelledby="rescue-heading">
+          <div class="project-index" aria-hidden="true">03</div><div class="project-content">
+            <div class="project-meta"><span class="status neutral">Team project</span><span>2026</span></div>
+            <h3 id="rescue-heading">RescueScout</h3>
+            <p class="project-subtitle">A confidence-aware search-and-report robot · NUS</p>
+            <p>Contributed to a Raspberry Pi–Arduino mobile robot integrating camera-based perception, teleoperation, ultrasonic safety sensing, and shared autonomy. Worked on marker-assisted topological mapping and route planning, with human review of uncertain detections.</p>
+            <ul class="project-tags"><li>Mobile robotics</li><li>Shared autonomy</li><li>System integration</li></ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="background" class="section" aria-labelledby="background-heading">
+        <div class="section-title"><div><p class="eyebrow">03 / FOUNDATION</p><h2 id="background-heading">Background</h2></div></div>
+        <div class="education-entry"><span class="timeline-dot" aria-hidden="true"></span><div><span class="date">2024 — PRESENT</span><h3>Southern University of Science and Technology</h3><p>Computer Science · Turing Class</p><p class="education-meta">GPA 3.73 / 4.00 <span aria-hidden="true">·</span> Honors Student</p></div></div>
+        <div class="background-grid">
+          <div><h3 class="minor-heading">Tools I work with</h3><dl class="tools"><div><dt>Languages</dt><dd>Python, C++, Java</dd></div><div><dt>Frameworks & libraries</dt><dd>PyTorch, NumPy, OpenCV, Matplotlib</dd></div><div><dt>Simulation</dt><dd>Habitat</dd></div></dl></div>
+          <div><h3 class="minor-heading">Honors & competitions</h3><ul class="honors"><li><strong>Outstanding Scholarship, SUSTech</strong><span>Second Prize (sophomore year); Third Prize</span></li><li><strong>Mathematical Contest in Modeling</strong><span>Guangdong contest · Award of Excellence, 2025</span></li><li><strong>MCM / COMAP</strong><span>Successful Participant, 2026</span></li></ul></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact" aria-labelledby="contact-heading">
+        <p class="eyebrow">04 / GET IN TOUCH</p><h2 id="contact-heading">Let’s talk about research.</h2>
+        <p>I’m interested in research conversations around navigation, robot learning, and reliable embodied decision-making.</p>
+        <a class="email-link" href="mailto:ziyuw9350@gmail.com">ziyuw9350@gmail.com <span aria-hidden="true">↗</span></a>
+        <div class="contact-links"><a href="assets/Ziyu_Wang_CV.pdf" target="_blank" rel="noopener">Download CV <span aria-hidden="true">↗</span></a><a href="https://github.com/Aurora-Flipped" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <footer><span>© 2026 Ziyu Wang</span><span>Last updated · October 2026</span></footer>
+    </main>
+  </div>
+</body>
+</html>
