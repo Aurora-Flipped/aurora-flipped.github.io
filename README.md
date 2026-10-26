@@ -28,4 +28,6 @@ From this directory, run `python -m http.server 4173 --bind 127.0.0.1` and visit
 
 Edit the corresponding text in `index.html`. Replace `assets/Ziyu_Wang_CV.pdf` whenever the CV changes. Keep research status and reported results consistent with the CV. The current site describes ongoing research and includes no unverified publication, performance gain, supervisor, or project-code link.
 
+Do not display GPA, class rank, or percentile information in the homepage text. The downloadable application CV is maintained separately.
+
 The application profile, outreach records, internal proposals, and original research files are outside this website directory and are not part of the website repository.
